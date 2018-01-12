@@ -3,233 +3,54 @@
     </head>
     <body>
         <style>
-            @keyframes anim-1
+            @keyframes bb-mask-all
             {
                 0% {
-                    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 130%, 0% 130%);
-                    clip-path: polygon(0% 100%, 100% 100%, 100% 130%, 0% 130%);
-                    opacity: 1;
-                }
-                99% {
-                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 5%, 0% 5%);
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 5%, 0% 5%);
-                    opacity: 1;
+                    transform: translateY(-500px)
                 }
                 100% {
-                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 5%, 0% 5%);
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 5%, 0% 5%);
-                    opacity: 0;
+                    transform: translateY(500px)
                 }
             }
-            @keyframes anim-2
-            {
-                0% {
-                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 5%, 0% 5%);
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 5%, 0% 5%);
-                    opacity: 1;
-                }
-                50% {
-                    -webkit-clip-path: polygon(0% 30%, 100% 30%, 100% 70%, 0% 70%);
-                    clip-path: polygon(0% 30%, 100% 30%, 100% 70%, 0% 70%);
-                    opacity: 1;
-                }
-                99% {
-                    -webkit-clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%);
-                    clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%);
-                    opacity: 1;
-                }
-                100% {
-                    -webkit-clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%);
-                    clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%);
-                    opacity: 0;
-                }
-            }
-            @keyframes anim-3
-            {
-                0% {
-                    -webkit-clip-path: polygon(0% 49%, 100% 49%, 100% 51%, 0% 51%);
-                    clip-path: polygon(0% 49%, 100% 49%, 100% 51%, 0% 51%);
-                    opacity: 1;
-                }
-                50% {
-                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                    opacity: 1;
-                }
-                99% {
-                    -webkit-clip-path: polygon(0% 49%, 100% 49%, 100% 51%, 0% 51%);
-                    clip-path: polygon(0% 49%, 100% 49%, 100% 51%, 0% 51%);
-                    opacity: 1;
-                }
-                100% {
-                    -webkit-clip-path: polygon(0% 49%, 100% 49%, 100% 51%, 0% 51%);
-                    clip-path: polygon(0% 49%, 100% 49%, 100% 51%, 0% 51%);
-                    opacity: 0;
-                }
-            }
-            @keyframes anim-4
-            {
-                0% {
-                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 10%);
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 10%);
-                    opacity: 1;
-                }
-                99% {
-                    -webkit-clip-path: polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%);
-                    clip-path: polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%);
-                    opacity: 1;
-                }
-                100% {
-                    -webkit-clip-path: polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%);
-                    clip-path: polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%);
-                    opacity: 0;
-                }
-            }
-            @keyframes anim-5
-            {
-                0% {
-                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% -30%, 0% -30%);
-                    clip-path: polygon(0% 0%, 100% 0%, 100% -30%, 0% -30%);
-                    opacity: 1;
-                }
-                99% {
-                    -webkit-clip-path: polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%);
-                    clip-path: polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%);
-                    opacity: 1;
-                }
-                100% {
-                    -webkit-clip-path: polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%);
-                    clip-path: polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%);
-                    opacity: 0;
-                }
-            }
-            @keyframes anim-all
-            {
-                0% {
-                    -webkit-clip-path: polygon(0% 49%, 100% 49%, 100% 51%, 0% 51%);
-                    clip-path: polygon(0% 49%, 100% 49%, 100% 51%, 0% 51%);
-                    opacity: 1;
-                }
-                100% {
-                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                    opacity: 1;
-                }
-            }
-            #anim-logo-container
+            #bb-anim
             {
                 position: relative;
-                width: 374px;
-                height: 350px;
+                width: 748px;
+                height: 699px;
                 border: 1px solid #999999;
             }
-            .anim-logo-img
+            #bb-anim #anim-svg
             {
-                position: absolute;
+                position: relative;
                 width: 100%;
                 height: 100%;
-                overflow: hidden;
             }
-            .anim-logo-img img
+            #bb-anim .anim-img
             {
-                position: absolute;
                 width: 100%;
                 height: auto;
             }
-            #anim-logo-all
+            
+            #bb-anim #anim-all
             {
+                clip-path: url(#anim-mask);
             }
-            #anim-logo-1-img
+            #bb-anim #anim-all-rect
             {
-                -webkit-clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
-                clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
-                opacity: 0;
-                animation-name: anim-1;
+                animation-name: bb-mask-all;
                 animation-duration: 4s;
-                animation-delay: 2.9s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in;
-            }
-            #anim-logo-2-img
-            {
-                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                opacity: 0;
-                animation-name: anim-2;
-                animation-duration: 4s;
-                animation-delay: 3.2s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-out;
-            }
-            #anim-logo-3-img
-            {
-                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                opacity: 0;
-                animation-name: anim-3;
-                animation-duration: 4s;
-                animation-delay: 2.5s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in;
-            }
-            #anim-logo-4-img
-            {
-                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 10%);
-                clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 10%);
-                opacity: 0;
-                animation-name: anim-4;
-                animation-duration: 4s;
-                animation-delay: 3s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-out;
-            }
-            #anim-logo-5-img
-            {
-                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% -30%, 0% -30%);
-                clip-path: polygon(0% 0%, 100% 0%, 100% -30%, 0% -30%);
-                opacity: 0;
-                animation-name: anim-1;
-                animation-duration: 4s;
-                animation-delay: 3.1s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in;
-            }
-            #anim-logo-all-img
-            {
-                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                opacity: 0;
-                animation-name: anim-all;
-                animation-duration: 4s;
-                animation-delay: 4.5s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
             }
         </style>
-        <div id="anim-logo-container">
-            <div class="anim-logo-img">
-                <img src="sunflower-2.png" id="anim-logo-2-img" />
-            </div>
-            <div class="anim-logo-img">
-                <img src="sunflower-5.png" id="anim-logo-5-img" />
-            </div>
-            <div class="anim-logo-img">
-                <img src="sunflower-3.png" id="anim-logo-3-img" />
-            </div>
-            <div class="anim-logo-img">
-                <img src="sunflower-1.png" id="anim-logo-1-img" />
-            </div>
-            <div class="anim-logo-img">
-                <img src="sunflower-4.png" id="anim-logo-4-img" />
-            </div>
-            <div class="anim-logo-img">
-                <img src="sunflower-all.png" id="anim-logo-all-img" />
-            </div>
+        <div id="bb-anim">
+            <svg version="1.1" id="anim-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1634 1578" style="enable-background:new 0 0 1634 1578;" xml:space="preserve">
+                <image xlink:href="sunflower-all.png" id="anim-all" class="anim-img" x="0" y="0"/>
+                <clipPath id="anim-mask">
+                    <rect y="661.1" width="1634" height="255.8" id="anim-all-rect"/>
+                </clipPath>
+            </svg>
         </div>
     </body>
 </html>
